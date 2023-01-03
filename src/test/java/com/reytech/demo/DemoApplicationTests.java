@@ -1,13 +1,28 @@
 package com.reytech.demo;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+public class Personne {
 
-@SpringBootTest
-class DemoApplicationTests {
+    public String firstName;
+    public String lastName;
 
-	@Test
-	void contextLoads() {
-	}
+    public Personne(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
