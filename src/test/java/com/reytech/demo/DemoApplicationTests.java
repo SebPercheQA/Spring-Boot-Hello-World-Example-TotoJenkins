@@ -1,51 +1,22 @@
-// package com.reytech.demo;
-// import static org.junit.jupiter.api.Assertions.assertAll;
-// import static org.junit.jupiter.api.Assertions.assertEquals;
-// import org.junit.jupiter.api.Test;
-// import org.springframework.boot.test.context.SpringBootTest;
-// import com.reytech.demo.Personne;
-
-// @SpringBootTest
-// class DemoApplicationTests {
-
-// 	@Test
-// 	void contextLoads() {
-// 	}
-	
-// 	@Test
-//         void groupedAssertions() {
-//         Personne pers = new Personne("Nassur", "Moumadi");
-
-//         assertAll("personne", () -> assertEquals("Nassur", pers.getFirstName()),
-//                               () -> assertEquals("Moumadi", pers.getLastName()));
-//     }
-// }
-
 package com.reytech.demo;
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import com.reytech.demo.Personne;
 
-public class Personne {
+@SpringBootTest
+class DemoApplicationTests {
 
-    public String firstName;
-    public String lastName;
+	@Test
+	void contextLoads() {
+	}
+	
+	@Test
+        void groupedAssertions() {
+        Personne pers = new Personne("Nassur", "Moumadi");
 
-    public Personne(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+        assertAll("personne", () -> assertEquals("Nassur", pers.getFirstName()),
+                              () -> assertEquals("Moumadi", pers.getLastName()));
     }
 }
